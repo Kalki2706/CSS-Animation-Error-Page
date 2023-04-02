@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: Montserrat;
-  src: url(Montserrat-Bold.ttf);
+  src: url(font/Montserrat-Bold.ttf);
 }
 
 body {
@@ -29,7 +29,7 @@ h1 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-image: url(tree-ge0b892584_1280-transformed-min-ed.jpeg);
+  background-image: url(img/tree-ge0b892584_1280-transformed-min-ed.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
