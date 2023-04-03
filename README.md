@@ -1,1 +1,1 @@
-# Responsive Error Page
+# Error Page with CSS Animation
