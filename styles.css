@@ -93,37 +93,6 @@ button:active {
   box-shadow: none;
 }
 
-/* For Mobile devices */
-@media screen and (min-width: 0px) {
-  h1 {
-    font-size: 100px;
-  }
-}
-
-/* For ipads, tablets */
-@media screen and (min-width: 481px) {
-  h1 {
-    font-size: 150px;
-  }
-}
-
-/* small screens, laptops */
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 200px;
-  }
-}
-
-/* Desktops, large screens */
-@media screen and (min-width: 1024px) {
-  h1 {
-    font-size: 250px;
-  }
-}
-
-/* For Extra large screens */
-@media screen and (min-width: 1200px) {
-  h1 {
-    font-size: 300px;
-  }
+a {
+  text-decoration: none;
 }
