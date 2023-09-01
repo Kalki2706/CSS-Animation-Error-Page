@@ -1,7 +1,8 @@
 :root {
   --black: #000;
   --white: #fff;
-  --gray-brd: #141416;
+  --cream: #fad6b2;
+  --gray: #141416;
   --blue: #0055ff;
   --green: #a7ff35;
   --pink: #ff198c;
@@ -19,8 +20,8 @@ html {
 
 body {
   min-height: 100vh;
-  background: var(--black);
-  color: var(--white);
+  background: var(--cream);
+  color: var(--black);
   text-align: center;
   display: grid;
   place-content: center;
@@ -30,14 +31,68 @@ main {
   width: 100%;
 }
 
-h1 {
-  margin: 0 0 0.5em;
-  font-size: clamp(7.8rem, 25vw, 25rem);
+.hero-text {
+  font-size: clamp(7.8rem, 25vw, 30rem);
+  font-weight: 800;
+  margin: 0;
   background: no-repeat center url('./img/tree.jpeg');
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  animation: bg-animate 8s cubic-bezier(0.4, 0, 0.54, 1) infinite;
+  animation: bg-animate 7s cubic-bezier(0.4, 0, 0.54, 1) infinite;
+}
+
+@keyframes bg-animate {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.sub-head {
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  text-transform: uppercase;
+  margin: 1.5em 0 0.5em;
+  font-weight: 700;
+}
+
+.info {
+  max-width: 35em;
+  margin: 0 auto;
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.cta {
+  text-decoration: none;
+  display: inline-block;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 1.25px;
+  background: var(--white);
+  color: var(--black);
+  padding: 1em 2em;
+  margin: 1.5em 0 1em;
+  border-radius: 3em;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.cta:hover {
+  background: var(--black);
+  box-shadow: 2px 2px 8px var(--blue);
+  color: var(--green);
+}
+
+.cta:active {
+  color: var(--pink);
+  box-shadow: none;
 }
