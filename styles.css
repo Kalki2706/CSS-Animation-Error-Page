@@ -1,98 +1,43 @@
-* {
-  margin: 0;
-  padding: 0;
+:root {
+  --black: #000;
+  --white: #fff;
+  --gray-brd: #141416;
+  --blue: #0055ff;
+  --green: #a7ff35;
+  --pink: #ff198c;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: Montserrat;
-  src: url(./font/Montserrat-Bold.ttf);
+html {
+  font: 62.5% 'Montserrat', 'sans-serif';
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  overflow: hidden;
-  background-color: #050505;
-  color: #fff;
+  min-height: 100vh;
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  width: 100%;
 }
 
 h1 {
-  font-size: 300px;
-  font-family: Montserrat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 200px;
-  color: transparent;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-image: url(./img/tree-ge0b892584_1280-transformed-min-ed.jpeg);
-  background-position: center;
-  background-repeat: no-repeat;
+  margin: 0 0 0.5em;
+  font-size: clamp(7.8rem, 25vw, 25rem);
+  background: no-repeat center url('./img/tree.jpeg');
   background-size: cover;
-  animation: bg-animate 20s cubic-bezier(0.4, 0, 0.54, 1) infinite;
-}
-
-@keyframes bg-animate {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-
-h4,
-p,
-button {
-  text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  margin: 2% auto;
-}
-
-h4 {
-  font-size: 2rem;
-}
-
-p {
-  font-size: 1.313rem;
-  width: 28%;
-}
-
-button {
-  display: flex;
-  background-color: #141416;
-  color: #fff;
-  border-radius: 30px;
-  padding: 1em 2em;
-  border: 2px solid #141416;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-top: 4%;
-  cursor: pointer;
-  transition: border 0.15s, box-shadow 0.15s, color 0.15s;
-}
-
-button:hover {
-  border: 2px solid #0055ff;
-  box-shadow: 0px 4px 10px #0055ff;
-  color: #a7ff35;
-}
-
-button:active {
-  /* background-color: #0055ff; */
-  color: #ff198c;
-  box-shadow: none;
-}
-
-a {
-  text-decoration: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: bg-animate 8s cubic-bezier(0.4, 0, 0.54, 1) infinite;
 }
